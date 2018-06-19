@@ -1,0 +1,83 @@
+<?php
+
+namespace Jfcherng\ArrayDumper\Test\Dumper;
+
+use Jfcherng\ArrayDumper\DumperFactory;
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @coversNothing
+ */
+class PhpDumperTest extends TestCase
+{
+    protected static $dumperName = 'php';
+
+    /**
+     * The dumper object.
+     *
+     * @var object
+     */
+    protected static $dumper;
+
+    /**
+     * {@inheritdoc}
+     */
+    public static function setUpBeforeClass()
+    {
+        static::$dumper = DumperFactory::make(static::$dumperName)->setOptions([
+            'shortArray' => true,
+            'indent' => 4,
+        ]);
+    }
+
+    /**
+     * Provides testcases.
+     *
+     * @return array the testcases
+     */
+    public function dumperDumpDataProvider(): array
+    {
+        return [
+            [
+                [
+                    0 => 'zero',
+                    'foo' => 'bar',
+                ],
+                <<<'EOT'
+<?php
+
+return [
+    0 => 'zero',
+    'foo' => 'bar',
+];
+EOT
+            ],
+            [
+                ['zero', 'one', '二'],
+                <<<'EOT'
+<?php
+
+return [
+    0 => 'zero',
+    1 => 'one',
+    2 => '二',
+];
+EOT
+            ],
+        ];
+    }
+
+    /**
+     * Test PhpDumper::dump().
+     *
+     * @covers \Jfcherng\ArrayDumper\Dumper\PhpDumper::dump
+     * @dataProvider dumperDumpDataProvider
+     *
+     * @param array  $input  the input
+     * @param string $output the expected output
+     */
+    public function testDump(array $input, string $output): void
+    {
+        $this->assertSame($output, rtrim(static::$dumper->dump($input)));
+    }
+}

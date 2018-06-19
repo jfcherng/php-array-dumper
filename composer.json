@@ -1,0 +1,41 @@
+{
+    "name": "jfcherng/php-array-dumper",
+    "description": "Dump an array into PHP code, JSON, YAML, etc...",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jack Cherng",
+            "email": "jfcherng@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jfcherng\\ArrayDumper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jfcherng\\ArrayDumper\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.1.3",
+        "nicmart/string-template": "^0.1.1",
+        "symfony/yaml": "^4.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.12.1",
+        "phpunit/phpunit": "^7.2.4"
+    },
+    "scripts": {
+        "fix": [
+            "php-cs-fixer fix --verbose"
+        ],
+        "test": [
+            "phpunit --verbose"
+        ]
+    }
+}
