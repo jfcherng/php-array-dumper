@@ -2,6 +2,7 @@
     "name": "jfcherng/php-array-dumper",
     "description": "Dump an array into PHP code, JSON, YAML, etc...",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jack Cherng",
