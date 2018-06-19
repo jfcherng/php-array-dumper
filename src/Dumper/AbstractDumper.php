@@ -105,9 +105,7 @@ abstract class AbstractDumper implements DumperInterface
     {
         $dir = dirname($filename);
 
-        if ($dir !== '' && !is_dir($dir)) {
-            mkdir($dir, 0777);
-        }
+        !is_dir($dir) && mkdir($dir, 0777, true);
 
         return file_put_contents($filename, $this->dump($array), $flags);
     }
