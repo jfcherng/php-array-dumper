@@ -49,7 +49,7 @@ deep:
 var_dump($string);
 
 // dump into an external file
-$success = $dumper->toFile($array, __DIR__ . "/results/test.{$dumperName}");
+$success = $dumper->toFile($array, __DIR__ . "/results/test." . $dumper::EXTENSION);
 
 ```
 
