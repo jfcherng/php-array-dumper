@@ -1,6 +1,6 @@
 # php-array-dumper [![Build Status](https://travis-ci.org/jfcherng/php-array-dumper.svg?branch=master)](https://travis-ci.org/jfcherng/php-array-dumper)
 
-Dump an array into PHP code, JSON, YAML, etc...
+Dump an array into XML, JSON, YAML, etc...
 
 
 # Installation

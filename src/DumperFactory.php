@@ -2,7 +2,7 @@
 
 namespace Jfcherng\ArrayDumper;
 
-use  Jfcherng\ArrayDumper\Dumper\AbstractDumper;
+use Jfcherng\ArrayDumper\Core\AbstractDumper;
 
 final class DumperFactory
 {
@@ -23,15 +23,16 @@ final class DumperFactory
     /**
      * Get a dumper object.
      *
-     * @param string $dumper the dumper
+     * @param string $dumper  the dumper
+     * @param mixed  ...$args the arguments
      *
      * @return AbstractDumper a new dumper object
      */
-    public static function make(string $dumper): AbstractDumper
+    public static function make(string $dumper, ...$args): AbstractDumper
     {
         $class = static::getClassName($dumper);
 
-        return new $class();
+        return new $class(...$args);
     }
 
     /**

@@ -2,33 +2,23 @@
 
 namespace Jfcherng\ArrayDumper\Test\Dumper;
 
-use Jfcherng\ArrayDumper\DumperFactory;
-use PHPUnit\Framework\TestCase;
-
 /**
  * @coversNothing
  */
-class PhpDumperTest extends TestCase
+class PhpDumperTest extends AbstractDumperTestCommon
 {
-    protected static $dumperName = 'php';
-
     /**
-     * The dumper object.
-     *
-     * @var object
+     * {@inheritdoc}
      */
-    protected static $dumper;
+    protected static $dumperName = 'php';
 
     /**
      * {@inheritdoc}
      */
-    public static function setUpBeforeClass()
-    {
-        static::$dumper = DumperFactory::make(static::$dumperName)->setOptions([
-            'shortArray' => true,
-            'indent' => 4,
-        ]);
-    }
+    protected static $dumperOptions = [
+        'shortArray' => true,
+        'indent' => 4,
+    ];
 
     /**
      * Provides testcases.

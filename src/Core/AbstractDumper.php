@@ -1,6 +1,6 @@
 <?php
 
-namespace Jfcherng\ArrayDumper\Dumper;
+namespace Jfcherng\ArrayDumper\Core;
 
 use Jfcherng\ArrayDumper\Utility;
 

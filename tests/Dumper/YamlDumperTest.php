@@ -2,33 +2,23 @@
 
 namespace Jfcherng\ArrayDumper\Test\Dumper;
 
-use Jfcherng\ArrayDumper\DumperFactory;
-use PHPUnit\Framework\TestCase;
-
 /**
  * @coversNothing
  */
-class YamlDumperTest extends TestCase
+class YamlDumperTest extends AbstractDumperTestCommon
 {
-    protected static $dumperName = 'yaml';
-
     /**
-     * The dumper object.
-     *
-     * @var object
+     * {@inheritdoc}
      */
-    protected static $dumper;
+    protected static $dumperName = 'yaml';
 
     /**
      * {@inheritdoc}
      */
-    public static function setUpBeforeClass()
-    {
-        static::$dumper = DumperFactory::make(static::$dumperName)->setOptions([
-            'inline' => 2,
-            'indent' => 2,
-        ]);
-    }
+    protected static $dumperOptions = [
+        'inline' => 2,
+        'indent' => 2,
+    ];
 
     /**
      * Provides testcases.

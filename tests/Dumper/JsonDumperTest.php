@@ -2,15 +2,22 @@
 
 namespace Jfcherng\ArrayDumper\Test\Dumper;
 
-use Jfcherng\ArrayDumper\DumperFactory;
-use PHPUnit\Framework\TestCase;
-
 /**
  * @coversNothing
  */
-class JsonDumperTest extends TestCase
+class JsonDumperTest extends AbstractDumperTestCommon
 {
+    /**
+     * {@inheritdoc}
+     */
     protected static $dumperName = 'json';
+
+    /**
+     * {@inheritdoc}
+     */
+    protected static $dumperOptions = [
+        'flags' => JSON_UNESCAPED_UNICODE,
+    ];
 
     /**
      * The dumper object.
@@ -18,16 +25,6 @@ class JsonDumperTest extends TestCase
      * @var object
      */
     protected static $dumper;
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function setUpBeforeClass()
-    {
-        static::$dumper = DumperFactory::make(static::$dumperName)->setOptions([
-            'flags' => JSON_UNESCAPED_UNICODE,
-        ]);
-    }
 
     /**
      * Provides testcases.

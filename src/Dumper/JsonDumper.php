@@ -2,6 +2,8 @@
 
 namespace Jfcherng\ArrayDumper\Dumper;
 
+use Jfcherng\ArrayDumper\Core\AbstractDumper;
+
 class JsonDumper extends AbstractDumper
 {
     /**
