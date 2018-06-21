@@ -5,7 +5,9 @@ Dump an array into XML, JSON, YAML, etc...
 
 # Installation
 
-`$ composer require jfcherng/php-array-dumper`
+```
+$ composer require jfcherng/php-array-dumper
+```
 
 
 # Example
