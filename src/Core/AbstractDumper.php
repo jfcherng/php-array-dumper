@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Jfcherng\ArrayDumper\Core;
 
 use Jfcherng\ArrayDumper\Utility;
@@ -107,6 +109,6 @@ abstract class AbstractDumper implements DumperInterface
 
         !is_dir($dir) && mkdir($dir, 0777, true);
 
-        return file_put_contents($filename, $this->dump($array), $flags);
+        return (bool) file_put_contents($filename, $this->dump($array), $flags);
     }
 }

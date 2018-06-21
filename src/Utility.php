@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Jfcherng\ArrayDumper;
 
 use StringTemplate\SprintfEngine;

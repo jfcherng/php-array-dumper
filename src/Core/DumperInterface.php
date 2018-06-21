@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Jfcherng\ArrayDumper\Core;
 
 interface DumperInterface
