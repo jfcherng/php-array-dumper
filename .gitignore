@@ -9,3 +9,6 @@
 # composer
 composer.lock
 vendor/
+
+# tmp files
+results/
