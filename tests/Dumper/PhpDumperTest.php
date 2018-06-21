@@ -20,6 +20,7 @@ class PhpDumperTest extends AbstractDumperTest
     protected static $dumperOptions = [
         'shortArray' => true,
         'indent' => 4,
+        'minify' => false,
     ];
 
     /**

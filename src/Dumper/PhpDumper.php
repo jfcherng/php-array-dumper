@@ -21,6 +21,8 @@ class PhpDumper extends AbstractDumper
         'shortArray' => true,
         // numbers of spaces used as indentation
         'indent' => 4,
+        // remove extra spaces before/after "=>"
+        'minify' => false,
     ];
 
     /**
@@ -41,6 +43,7 @@ EOF;
         $object = json_decode(str_replace(['(', ')'], ['&#40', '&#41'], json_encode($array)), true);
         $indent = str_repeat(' ', $this->options['indent']);
 
+        // "\u{e000}" / "\u{e001}" = array begin / end
         $arraySyntax = $this->options['shortArray']
             ? ["\u{e000}" => '[', "\u{e001}" => ']']
             : ["\u{e000}" => 'array(', "\u{e001}" => ')'];
@@ -55,6 +58,11 @@ EOF;
         $export = preg_replace("/ => (?=\u{e000}\n[^\S\n]*\u{e001})/m", ' => ', $export);
         $export = preg_replace('/([ ]{2})(?![^ ])/m', $indent, $export);
         $export = preg_replace('/^([ ]{2})/m', $indent, $export);
+
+        if ($this->options['minify']) {
+            $export = preg_replace("~^(\s*+)([0-9]++|'(?:\\\\'|[^'])++') => (?=[0-9'\"\u{e001}])~mS", '$1$2=>', $export);
+        }
+
         $export = strtr($export, $arraySyntax);
 
         return $export;
