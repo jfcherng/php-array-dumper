@@ -7,7 +7,7 @@ namespace Jfcherng\ArrayDumper\Test\Dumper;
 /**
  * @coversNothing
  */
-class JsonDumperTest extends AbstractDumperTestCommon
+class JsonDumperTest extends AbstractDumperTest
 {
     /**
      * {@inheritdoc}

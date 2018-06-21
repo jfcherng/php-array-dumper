@@ -7,7 +7,7 @@ namespace Jfcherng\ArrayDumper\Test\Dumper;
 use Jfcherng\ArrayDumper\DumperFactory;
 use PHPUnit\Framework\TestCase;
 
-abstract class AbstractDumperTestCommon extends TestCase
+abstract class AbstractDumperTest extends TestCase
 {
     /**
      * The short name of the dumper such as 'json', 'php', 'yaml', etc...
