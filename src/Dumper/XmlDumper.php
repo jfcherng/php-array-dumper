@@ -26,8 +26,8 @@ class XmlDumper extends AbstractDumper
         'version' => '1.0',
         // encoding
         'encoding' => 'UTF-8',
-        // prettify the output
-        'prettify' => true,
+        // minify the output
+        'minify' => false,
         // convert spaces in key into underscores
         'keySpaceToUnderscore' => true,
     ];
@@ -51,7 +51,7 @@ class XmlDumper extends AbstractDumper
         $dom = $xml->toDom();
         $dom->xmlVersion = $this->options['version'];
         $dom->encoding = $this->options['encoding'];
-        $dom->formatOutput = $this->options['prettify'];
+        $dom->formatOutput = !$this->options['minify'];
 
         return $dom->saveXML();
     }

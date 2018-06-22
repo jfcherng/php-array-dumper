@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Jfcherng\ArrayDumper\Dumper;
 
 use Jfcherng\ArrayDumper\Core\AbstractDumper;
+use Jfcherng\ArrayDumper\Utility;
 
 class JsonDumper extends AbstractDumper
 {
@@ -20,9 +21,11 @@ class JsonDumper extends AbstractDumper
      */
     protected static $optionsDef = [
         // json_encode() options
-        'flags' => JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE,
+        'flags' => JSON_UNESCAPED_UNICODE,
         // the maximum depth
         'depth' => 512,
+        // minify the output
+        'minify' => false,
     ];
 
     /**
@@ -32,7 +35,11 @@ class JsonDumper extends AbstractDumper
     {
         return json_encode(
             $array,
-            $this->options['flags'],
+            Utility::configBit(
+                $this->options['flags'],
+                JSON_PRETTY_PRINT,
+                !$this->options['minify']
+            ),
             $this->options['depth']
         );
     }

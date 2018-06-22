@@ -19,6 +19,7 @@ class JsonDumperTest extends AbstractDumperTest
      */
     protected static $dumperOptions = [
         'flags' => JSON_UNESCAPED_UNICODE,
+        'minify' => false,
     ];
 
     /**
@@ -41,11 +42,22 @@ class JsonDumperTest extends AbstractDumperTest
                     0 => 'zero',
                     'foo' => 'bar',
                 ],
-                '{"0":"zero","foo":"bar"}',
+                <<<'EOT'
+{
+    "0": "zero",
+    "foo": "bar"
+}
+EOT
             ],
             [
                 ['zero', 'one', '二'],
-                '["zero","one","二"]',
+                <<<'EOT'
+[
+    "zero",
+    "one",
+    "二"
+]
+EOT
             ],
         ];
     }

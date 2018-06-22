@@ -34,4 +34,59 @@ class Utility
 
         return $engines[$engineId]->render($template, $value);
     }
+
+    /**
+     * Set the bit.
+     *
+     * @param int  $flags     the flags
+     * @param int  $mask      the mask
+     * @param bool $condition the condition
+     *
+     * @return int
+     */
+    public static function configBit(int $flags, int $mask, bool $condition): int
+    {
+        return $condition
+            ? static::setBit($flags, $mask)
+            : static::clearBit($flags, $mask);
+    }
+
+    /**
+     * Set the bit.
+     *
+     * @param int $flags the flags
+     * @param int $mask  the mask
+     *
+     * @return int
+     */
+    public static function setBit(int $flags, int $mask): int
+    {
+        return $flags | $mask;
+    }
+
+    /**
+     * Clear the bit.
+     *
+     * @param int $flags the flags
+     * @param int $mask  the mask
+     *
+     * @return int
+     */
+    public static function clearBit(int $flags, int $mask): int
+    {
+        return $flags & ~$mask;
+    }
+
+    /**
+     * Toggle the bit.
+     *
+     * @param int $flags the flags
+     * @param int $mask  the mask
+     *
+     * @return int
+     */
+    public static function toggleBit(int $flags, int $mask): int
+    {
+        return $flags ^ $mask;
+    }
 }
