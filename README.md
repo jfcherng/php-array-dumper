@@ -32,8 +32,8 @@ $array = [
 
 $dumperName = 'yaml';
 
-// initiate a dumper and set its options
-$dumper = DumperFactory::make($dumperName)->setOptions([
+// initiate a dumper and optionally set its options
+$dumper = DumperFactory::make($dumperName, [
     'indent' => 2,
 ]);
 
@@ -50,9 +50,9 @@ deep:
 */
 var_dump($string);
 
-// dump into an external file
-$success = $dumper->toFile($array, __DIR__ . "/results/test." . $dumper::EXTENSION);
-
+// dump as an external file
+$outputFile = __DIR__ . '/results/test.' . $dumper::EXTENSION;
+$success = $dumper->toFile($array, $outputFile);
 ```
 
 
