@@ -20,7 +20,7 @@ class Utility
      *
      * @return string The templated string
      */
-    public static function str_format(string $template, $value, string $left = '{', string $right = '}'): string
+    public static function strFormat(string $template, $value, string $left = '{', string $right = '}'): string
     {
         // engine instances
         static $engines = [];

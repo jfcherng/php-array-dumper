@@ -89,7 +89,7 @@ abstract class AbstractDumper implements DumperInterface
      */
     public function dump(array $array): string
     {
-        return Utility::str_format($this->template, [
+        return Utility::strFormat($this->template, [
             'code' => $this->pureDump($array),
         ]);
     }
