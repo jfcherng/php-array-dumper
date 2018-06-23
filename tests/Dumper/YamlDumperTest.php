@@ -18,8 +18,8 @@ class YamlDumperTest extends AbstractDumperTest
      * {@inheritdoc}
      */
     protected static $dumperOptions = [
-        'inline' => 2,
         'indent' => 2,
+        'inline' => 2,
     ];
 
     /**

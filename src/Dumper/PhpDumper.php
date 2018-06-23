@@ -41,7 +41,7 @@ EOF;
     public function pureDump(array $array): string
     {
         $object = json_decode(str_replace(['(', ')'], ['&#40', '&#41'], json_encode($array)), true);
-        $indent = str_repeat(' ', $this->options['indent']);
+        $indent = $this->options['minify'] ? '' : str_repeat(' ', $this->options['indent']);
 
         // "\u{e000}" / "\u{e001}" = array begin / end
         $arraySyntax = $this->options['shortArray']
@@ -54,6 +54,7 @@ EOF;
             '&#40' => '(',
             '&#41' => ')',
         ]);
+
         $export = preg_replace("/ => \n[^\S\n]*(?=\u{e000})/m", ' => ', $export);
         $export = preg_replace("/ => (?=\u{e000}\n[^\S\n]*\u{e001})/m", ' => ', $export);
         $export = preg_replace('/([ ]{2})(?![^ ])/m', $indent, $export);

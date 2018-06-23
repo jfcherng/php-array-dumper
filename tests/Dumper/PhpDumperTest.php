@@ -18,9 +18,9 @@ class PhpDumperTest extends AbstractDumperTest
      * {@inheritdoc}
      */
     protected static $dumperOptions = [
-        'shortArray' => true,
         'indent' => 4,
         'minify' => false,
+        'shortArray' => true,
     ];
 
     /**

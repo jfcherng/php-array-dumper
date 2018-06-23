@@ -18,12 +18,12 @@ class XmlDumperTest extends AbstractDumperTest
      * {@inheritdoc}
      */
     protected static $dumperOptions = [
+        'encoding' => 'UTF-8',
+        'keySpaceToUnderscore' => true,
+        'minify' => false,
         'root' => 'root',
         'rootAttr' => [],
         'version' => '1.0',
-        'encoding' => 'UTF-8',
-        'minify' => false,
-        'keySpaceToUnderscore' => true,
     ];
 
     /**
