@@ -18,18 +18,18 @@ class XmlDumper extends AbstractDumper
      * {@inheritdoc}
      */
     protected static $optionsDef = [
+        // encoding
+        'encoding' => 'UTF-8',
+        // convert spaces in key into underscores
+        'keySpaceToUnderscore' => true,
+        // minify the output
+        'minify' => false,
         // the name of the root node
         'root' => 'root',
         // the attributes of the root node
         'rootAttr' => [],
         // the XML version
         'version' => '1.0',
-        // encoding
-        'encoding' => 'UTF-8',
-        // minify the output
-        'minify' => false,
-        // convert spaces in key into underscores
-        'keySpaceToUnderscore' => true,
     ];
 
     /**

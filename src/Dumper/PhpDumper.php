@@ -17,12 +17,12 @@ class PhpDumper extends AbstractDumper
      * {@inheritdoc}
      */
     protected static $optionsDef = [
-        // use the short array syntax
-        'shortArray' => true,
         // numbers of spaces used as indentation
         'indent' => 4,
         // remove extra spaces before/after "=>"
         'minify' => false,
+        // use the short array syntax
+        'shortArray' => true,
     ];
 
     /**

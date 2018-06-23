@@ -27,14 +27,14 @@ class JsonDumper extends AbstractDumper
      * @see http://php.net/manual/en/function.json-encode.php
      */
     protected static $optionsDef = [
-        // json_encode() options
-        'flags' => JSON_UNESCAPED_UNICODE,
-        // the maximum depth
-        'depth' => 512,
-        // minify the output
-        'minify' => false,
         // numbers of spaces used as indentation
         'indent' => 4,
+        // the maximum depth
+        'depth' => 512,
+        // json_encode() options
+        'flags' => JSON_UNESCAPED_UNICODE,
+        // minify the output
+        'minify' => false,
     ];
 
     /**
