@@ -9,6 +9,11 @@
             "email": "jfcherng@gmail.com"
         }
     ],
+    "keywords": [
+        "JSON",
+        "XML",
+        "YAML"
+    ],
     "autoload": {
         "psr-4": {
             "Jfcherng\\ArrayDumper\\": "src/"
