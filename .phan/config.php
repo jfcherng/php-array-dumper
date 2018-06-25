@@ -16,9 +16,9 @@ return [
     // your application should be included in this list.
     'directory_list' => [
         'src',
-        'vendor\nicmart\string-template\src',
-        'vendor\spatie\array-to-xml\src',
-        'vendor\symfony\yaml',
+        'vendor/nicmart/string-template/src',
+        'vendor/spatie/array-to-xml/src',
+        'vendor/symfony/yaml',
     ],
 
     // A directory list that defines files that will be excluded
