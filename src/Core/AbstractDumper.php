@@ -105,10 +105,10 @@ abstract class AbstractDumper implements DumperInterface
      */
     public function toFile(array $array, string $filename, int $flags = 0): bool
     {
-        $dir = dirname($filename);
+        $dir = \dirname($filename);
 
-        !is_dir($dir) && mkdir($dir, 0777, true);
+        !\is_dir($dir) && \mkdir($dir, 0777, true);
 
-        return (bool) file_put_contents($filename, $this->dump($array), $flags);
+        return (bool) \file_put_contents($filename, $this->dump($array), $flags);
     }
 }

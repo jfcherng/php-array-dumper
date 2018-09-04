@@ -18,7 +18,7 @@ class JsonDumperTest extends AbstractDumperTest
      * {@inheritdoc}
      */
     protected static $dumperOptions = [
-        'flags' => JSON_UNESCAPED_UNICODE,
+        'flags' => \JSON_UNESCAPED_UNICODE,
         'indent' => 4,
         'minify' => false,
     ];

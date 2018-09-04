@@ -64,6 +64,6 @@ final class DumperFactory
      */
     private static function getClassName(string $dumper): string
     {
-        return __NAMESPACE__ . '\\Dumper\\' . ucfirst($dumper) . 'Dumper';
+        return __NAMESPACE__ . '\\Dumper\\' . \ucfirst($dumper) . 'Dumper';
     }
 }

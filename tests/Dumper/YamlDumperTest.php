@@ -61,6 +61,6 @@ EOT
      */
     public function testDump(array $input, string $output): void
     {
-        $this->assertSame($output, rtrim(static::$dumper->dump($input)));
+        $this->assertSame($output, \rtrim(static::$dumper->dump($input)));
     }
 }

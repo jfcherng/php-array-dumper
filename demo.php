@@ -31,7 +31,7 @@ deep:
   map: { zero: 0, one: 1, 二: 2 }
 "
 */
-var_dump($string);
+\var_dump($string);
 
 // dump as an external file
 $outputFile = __DIR__ . '/results/test.' . $dumper::EXTENSION;

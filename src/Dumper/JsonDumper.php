@@ -32,7 +32,7 @@ class JsonDumper extends AbstractDumper
         // the maximum depth
         'depth' => 512,
         // json_encode() options
-        'flags' => JSON_UNESCAPED_UNICODE,
+        'flags' => \JSON_UNESCAPED_UNICODE,
         // minify the output
         'minify' => false,
     ];
@@ -42,23 +42,23 @@ class JsonDumper extends AbstractDumper
      */
     public function pureDump(array $array): string
     {
-        $export = json_encode(
+        $export = \json_encode(
             $array,
             Utility::configBit(
                 $this->options['flags'],
-                JSON_PRETTY_PRINT,
+                \JSON_PRETTY_PRINT,
                 !$this->options['minify']
             ),
             $this->options['depth']
         );
 
         if ($this->options['indent'] !== static::PHP_JSON_INDENT) {
-            $export = preg_replace_callback(
+            $export = \preg_replace_callback(
                 '/^( ++)/umS',
                 function (array $matches): string {
-                    return str_repeat(
+                    return \str_repeat(
                         ' ',
-                        $this->options['indent'] * strlen($matches[1]) / static::PHP_JSON_INDENT
+                        $this->options['indent'] * \strlen($matches[1]) / static::PHP_JSON_INDENT
                     );
                 },
                 $export
