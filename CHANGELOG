@@ -3,6 +3,12 @@ VERSION 1  INIT
 ===============
 
    Version 1.0 - init
+      04/09/2018 18:52  1.0.6  php-cs-fixer
+         85db54d php-cs-fixer: enable native_constant_invocation and native_function_invocation
+         0082528 Update deps
+         cbdb7a2 Rename CHANGELOG.md -> CHANGELOG
+         50039aa Update deps
+         cf1d65b Update .travis.yml
       18/07/2018 08:49  1.0.5  Add composer.lock
          d2efb90 Add composer.lock
       04/07/2018 15:33  1.0.4  nits
