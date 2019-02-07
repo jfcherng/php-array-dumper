@@ -24,13 +24,6 @@ class JsonDumperTest extends AbstractDumperTest
     ];
 
     /**
-     * The dumper object.
-     *
-     * @var object
-     */
-    protected static $dumper;
-
-    /**
      * Provides testcases.
      *
      * @return array the testcases

@@ -33,7 +33,7 @@ abstract class AbstractDumperTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         static::$dumper = DumperFactory::make(
             static::$dumperName,
