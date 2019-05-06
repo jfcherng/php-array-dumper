@@ -6,8 +6,10 @@ namespace Jfcherng\ArrayDumper\Test\Dumper;
 
 /**
  * @coversNothing
+ *
+ * @internal
  */
-class JsonDumperTest extends AbstractDumperTest
+final class JsonDumperTest extends AbstractDumperTest
 {
     /**
      * {@inheritdoc}
@@ -67,6 +69,6 @@ EOT
      */
     public function testDump(array $input, string $output): void
     {
-        $this->assertSame($output, static::$dumper->dump($input));
+        static::assertSame($output, static::$dumper->dump($input));
     }
 }
