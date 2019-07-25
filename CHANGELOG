@@ -3,6 +3,21 @@ VERSION 1  INIT
 ===============
 
    Version 1.0 - init
+      25/07/2019 18:09  1.0.7  nits
+         f31a2e5 nits
+         ae96afd Use JSON_UNESCAPED_SLASHES for JsonDumper
+         df988f7 Update deps
+         68f884d Add .gitattributes
+         8e1599c $ composer fix
+         3ce95af Update deps
+         d4f8d93 Update .travis.yml for 7.4snapshot
+         fb8b2e5 Add .editorconfig
+         e52698a Update deps
+         5085104 Fix tests
+         a1c4ca3 year++
+         c364ee6 Add tests for PHP 7.3
+         1bb2d5b Update README
+         21e3191 Update deps
       04/09/2018 18:52  1.0.6  php-cs-fixer
          85db54d php-cs-fixer: enable native_constant_invocation and native_function_invocation
          0082528 Update deps
