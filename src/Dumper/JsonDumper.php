@@ -32,7 +32,7 @@ class JsonDumper extends AbstractDumper
         // the maximum depth
         'depth' => 512,
         // json_encode() options
-        'flags' => \JSON_UNESCAPED_UNICODE,
+        'flags' => \JSON_UNESCAPED_SLASHES | \JSON_UNESCAPED_UNICODE,
         // minify the output
         'minify' => false,
     ];
