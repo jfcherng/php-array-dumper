@@ -7,7 +7,7 @@ namespace Jfcherng\ArrayDumper\Dumper;
 use Jfcherng\ArrayDumper\Core\AbstractDumper;
 use Symfony\Component\Yaml\Yaml;
 
-class YamlDumper extends AbstractDumper
+final class YamlDumper extends AbstractDumper
 {
     /**
      * {@inheritdoc}

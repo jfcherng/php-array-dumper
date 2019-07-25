@@ -6,7 +6,7 @@ namespace Jfcherng\ArrayDumper\Dumper;
 
 use Jfcherng\ArrayDumper\Core\AbstractDumper;
 
-class PhpDumper extends AbstractDumper
+final class PhpDumper extends AbstractDumper
 {
     /**
      * {@inheritdoc}

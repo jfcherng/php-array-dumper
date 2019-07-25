@@ -7,7 +7,7 @@ namespace Jfcherng\ArrayDumper\Dumper;
 use Jfcherng\ArrayDumper\Core\AbstractDumper;
 use Spatie\ArrayToXml\ArrayToXml;
 
-class XmlDumper extends AbstractDumper
+final class XmlDumper extends AbstractDumper
 {
     /**
      * {@inheritdoc}

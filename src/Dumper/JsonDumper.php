@@ -7,7 +7,7 @@ namespace Jfcherng\ArrayDumper\Dumper;
 use Jfcherng\ArrayDumper\Core\AbstractDumper;
 use Jfcherng\ArrayDumper\Utility;
 
-class JsonDumper extends AbstractDumper
+final class JsonDumper extends AbstractDumper
 {
     /**
      * {@inheritdoc}
