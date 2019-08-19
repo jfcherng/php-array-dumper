@@ -1,16 +1,23 @@
-# php-array-dumper [![Build Status](https://travis-ci.org/jfcherng/php-array-dumper.svg?branch=master)](https://travis-ci.org/jfcherng/php-array-dumper)
+# php-array-dumper
+
+<a href="https://travis-ci.org/jfcherng/php-array-dumper"><img alt="Travis (.org) branch" src="https://img.shields.io/travis/jfcherng/php-array-dumper/master"></a>
+<a href="https://packagist.org/packages/jfcherng/php-array-dumper"><img alt="Packagist" src="https://img.shields.io/packagist/dt/jfcherng/php-array-dumper"></a>
+<a href="https://packagist.org/packages/jfcherng/php-array-dumper"><img alt="Packagist Version" src="https://img.shields.io/packagist/v/jfcherng/php-array-dumper"></a>
+<a href="https://github.com/jfcherng/php-array-dumper/blob/master/LICENSE"><img alt="Project license" src="https://img.shields.io/github/license/jfcherng/php-array-dumper"></a>
+<a href="https://github.com/jfcherng/php-array-dumper/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jfcherng/php-array-dumper?logo=github"></a>
+<a href="https://www.paypal.me/jfcherng/5usd" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal" /></a>
 
 Dump an array into XML, JSON, YAML, etc...
 
 
-# Installation
+## Installation
 
-```
+```bash
 $ composer require jfcherng/php-array-dumper
 ```
 
 
-# Example
+## Example
 
 See `demo.php`.
 
@@ -30,6 +37,7 @@ $array = [
     ],
 ];
 
+// 'json', 'xml', 'yaml', 'php'
 $dumperName = 'yaml';
 
 // initiate a dumper and optionally set its options
@@ -54,9 +62,3 @@ var_dump($string);
 $outputFile = __DIR__ . '/results/test.' . $dumper::EXTENSION;
 $success = $dumper->toFile($array, $outputFile);
 ```
-
-
-Supporters <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ATXYY9Y78EQ3Y" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" /></a>
-==========
-
-Thank you guys for sending me some cups of coffee.

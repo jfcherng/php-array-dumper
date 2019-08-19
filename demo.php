@@ -13,6 +13,7 @@ $array = [
     ],
 ];
 
+// 'json', 'xml', 'yaml', 'php'
 $dumperName = 'yaml';
 
 // initiate a dumper and optionally set its options
