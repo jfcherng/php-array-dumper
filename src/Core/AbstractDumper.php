@@ -84,8 +84,6 @@ abstract class AbstractDumper implements DumperInterface
      * Render template with the array.
      *
      * @param array $array the array
-     *
-     * @return string
      */
     public function dump(array $array): string
     {

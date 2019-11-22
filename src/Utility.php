@@ -41,8 +41,6 @@ class Utility
      * @param int  $flags     the flags
      * @param int  $mask      the mask
      * @param bool $condition the condition
-     *
-     * @return int
      */
     public static function configBit(int $flags, int $mask, bool $condition): int
     {
@@ -56,8 +54,6 @@ class Utility
      *
      * @param int $flags the flags
      * @param int $mask  the mask
-     *
-     * @return int
      */
     public static function setBit(int $flags, int $mask): int
     {
@@ -69,8 +65,6 @@ class Utility
      *
      * @param int $flags the flags
      * @param int $mask  the mask
-     *
-     * @return int
      */
     public static function clearBit(int $flags, int $mask): int
     {
@@ -82,8 +76,6 @@ class Utility
      *
      * @param int $flags the flags
      * @param int $mask  the mask
-     *
-     * @return int
      */
     public static function toggleBit(int $flags, int $mask): int
     {
