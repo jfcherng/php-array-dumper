@@ -3,6 +3,10 @@ VERSION 1  INIT
 ===============
 
    Version 1.0 - init
+      23/11/2019 07:46  1.0.8  Allow Symfony 5 components
+         573e3c2 Update deps
+         fbe5570 Add php_codesniffer
+         97aaa97 Update readme to use badges from shields.io
       25/07/2019 18:09  1.0.7  nits
          f31a2e5 nits
          ae96afd Use JSON_UNESCAPED_SLASHES for JsonDumper
