@@ -3,6 +3,12 @@ VERSION 1  INIT
 ===============
 
    Version 1.0 - init
+      28/05/2020 03:26  1.0.10  allow PHP 8
+         b9012b1 chore: update deps
+         7c104f2 chore: Composer PHP constrain >=7.1.3
+         82c0e1c docs: use markdown grammar badges in readme
+         bb63eb1 Update deps
+         f1b915d Update .travis.yml to PHP 7.4 stable
       23/11/2019 07:48  1.0.9  Allow Symfony 5 components
          a933cb7 Allow Symfony 5 components
       25/07/2019 18:09  1.0.7  nits
