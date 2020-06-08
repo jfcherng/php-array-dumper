@@ -1,11 +1,11 @@
 # php-array-dumper
 
-[![Travis (.org) branch](https://img.shields.io/travis/jfcherng/php-array-dumper/master)](https://travis-ci.org/jfcherng/php-array-dumper)
-[![Packagist](https://img.shields.io/packagist/dt/jfcherng/php-array-dumper)](https://packagist.org/packages/jfcherng/php-array-dumper)
-[![Packagist Version](https://img.shields.io/packagist/v/jfcherng/php-array-dumper)](https://packagist.org/packages/jfcherng/php-array-dumper)
-[![Project license](https://img.shields.io/github/license/jfcherng/php-array-dumper)](https://github.com/jfcherng/php-array-dumper/blob/master/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/jfcherng/php-array-dumper?logo=github)](https://github.com/jfcherng/php-array-dumper/stargazers)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?logo=paypal)](https://www.paypal.me/jfcherng/5usd)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/jfcherng/php-array-dumper/Main/master?style=flat-square)](https://github.com/jfcherng/php-array-dumper/actions)
+[![Packagist](https://img.shields.io/packagist/dt/jfcherng/php-array-dumper?style=flat-square)](https://packagist.org/packages/jfcherng/php-array-dumper)
+[![Packagist Version](https://img.shields.io/packagist/v/jfcherng/php-array-dumper?style=flat-square)](https://packagist.org/packages/jfcherng/php-array-dumper)
+[![Project license](https://img.shields.io/github/license/jfcherng/php-array-dumper?style=flat-square)](https://github.com/jfcherng/php-array-dumper/blob/master/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/jfcherng/php-array-dumper?style=flat-square&logo=github)](https://github.com/jfcherng/php-array-dumper/stargazers)
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?style=flat-square&logo=paypal)](https://www.paypal.me/jfcherng/5usd)
 
 Dump an array into XML, JSON, YAML, etc...
 
