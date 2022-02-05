@@ -39,25 +39,25 @@ final class PhpDumperTest extends AbstractDumperTest
                     'foo' => 'bar',
                 ],
                 <<<'EOT'
-<?php
+                <?php
 
-return [
-    0 => 'zero',
-    'foo' => 'bar',
-];
-EOT
+                return [
+                    0 => 'zero',
+                    'foo' => 'bar',
+                ];
+                EOT,
             ],
             [
                 ['zero', 'one', '二'],
                 <<<'EOT'
-<?php
+                <?php
 
-return [
-    0 => 'zero',
-    1 => 'one',
-    2 => '二',
-];
-EOT
+                return [
+                    0 => 'zero',
+                    1 => 'one',
+                    2 => '二',
+                ];
+                EOT,
             ],
         ];
     }
@@ -73,6 +73,6 @@ EOT
      */
     public function testDump(array $input, string $output): void
     {
-        static::assertSame($output, \rtrim(static::$dumper->dump($input)));
+        static::assertSame($output, rtrim(static::$dumper->dump($input)));
     }
 }

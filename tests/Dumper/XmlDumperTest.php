@@ -49,18 +49,18 @@ final class XmlDumperTest extends AbstractDumperTest
                     ],
                 ],
                 <<<'EOT'
-<?xml version="1.0" encoding="UTF-8"?>
-<root>
-  <Good_guy attr1="value">
-    <name>Luke Skywalker</name>
-    <weapon>Lightsaber</weapon>
-  </Good_guy>
-  <Bad_guy>
-    <name>Sauron</name>
-    <weapon>Evil Eye </weapon>
-  </Bad_guy>
-</root>
-EOT
+                <?xml version="1.0" encoding="UTF-8"?>
+                <root>
+                  <Good_guy attr1="value">
+                    <name>Luke Skywalker</name>
+                    <weapon>Lightsaber</weapon>
+                  </Good_guy>
+                  <Bad_guy>
+                    <name>Sauron</name>
+                    <weapon>Evil Eye </weapon>
+                  </Bad_guy>
+                </root>
+                EOT,
             ],
         ];
     }
@@ -76,6 +76,6 @@ EOT
      */
     public function testDump(array $input, string $output): void
     {
-        static::assertSame($output, \rtrim(static::$dumper->dump($input)));
+        static::assertSame($output, rtrim(static::$dumper->dump($input)));
     }
 }

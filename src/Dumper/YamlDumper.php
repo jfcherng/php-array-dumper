@@ -12,7 +12,7 @@ final class YamlDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    const EXTENSION = 'yaml';
+    public const EXTENSION = 'yaml';
 
     /**
      * {@inheritdoc}
@@ -35,7 +35,7 @@ final class YamlDumper extends AbstractDumper
             $array,
             $this->options['inline'],
             $this->options['indent'],
-            $this->options['flags']
+            $this->options['flags'],
         );
     }
 }

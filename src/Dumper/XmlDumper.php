@@ -12,7 +12,7 @@ final class XmlDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    const EXTENSION = 'xml';
+    public const EXTENSION = 'xml';
 
     /**
      * {@inheritdoc}
@@ -45,7 +45,7 @@ final class XmlDumper extends AbstractDumper
                 '_attributes' => $this->options['rootAttr'],
                 'rootElementName' => $this->options['root'],
             ],
-            $this->options['keySpaceToUnderscore']
+            $this->options['keySpaceToUnderscore'],
         );
 
         $dom = $xml->toDom();

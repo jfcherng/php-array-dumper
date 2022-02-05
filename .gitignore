@@ -2,7 +2,6 @@
 *.cache
 .idea/
 .tags*
-.ropeproject
 /.web-server-pid
 **/oracle.sqlite
 
@@ -10,4 +9,7 @@
 vendor/
 
 # tmp files
-results/
+/var/*
+!/var/.gitkeep
+/branch-*
+/results

@@ -12,14 +12,14 @@ final class JsonDumper extends AbstractDumper
     /**
      * {@inheritdoc}
      */
-    const EXTENSION = 'json';
+    public const EXTENSION = 'json';
 
     /**
      * Default indent spaces in PHP json_encode().
      *
      * @var int
      */
-    const PHP_JSON_INDENT = 4;
+    public const PHP_JSON_INDENT = 4;
 
     /**
      * {@inheritdoc}
@@ -42,26 +42,26 @@ final class JsonDumper extends AbstractDumper
      */
     public function pureDump(array $array): string
     {
-        $export = \json_encode(
+        $export = json_encode(
             $array,
             Utility::configBit(
                 $this->options['flags'],
                 \JSON_PRETTY_PRINT,
-                !$this->options['minify']
+                !$this->options['minify'],
             ),
-            $this->options['depth']
+            $this->options['depth'],
         );
 
         if ($this->options['indent'] !== static::PHP_JSON_INDENT) {
-            $export = \preg_replace_callback(
-                '/^( ++)/umS',
+            $export = preg_replace_callback(
+                '/^ ++/umS',
                 function (array $matches): string {
-                    return \str_repeat(
+                    return str_repeat(
                         ' ',
-                        $this->options['indent'] * \strlen($matches[1]) / static::PHP_JSON_INDENT
+                        $this->options['indent'] * \strlen($matches[0]) / static::PHP_JSON_INDENT,
                     );
                 },
-                $export
+                $export,
             );
         }
 

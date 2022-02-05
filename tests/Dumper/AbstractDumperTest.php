@@ -37,7 +37,7 @@ abstract class AbstractDumperTest extends TestCase
     {
         static::$dumper = DumperFactory::make(
             static::$dumperName,
-            static::$dumperOptions
+            static::$dumperOptions,
         );
     }
 }

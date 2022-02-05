@@ -13,7 +13,7 @@ abstract class AbstractDumper implements DumperInterface
      *
      * @var string
      */
-    const EXTENSION = 'unknown';
+    public const EXTENSION = 'unknown';
 
     /**
      * The dumper options.
@@ -105,8 +105,8 @@ abstract class AbstractDumper implements DumperInterface
     {
         $dir = \dirname($filename);
 
-        !\is_dir($dir) && \mkdir($dir, 0777, true);
+        !is_dir($dir) && mkdir($dir, 0777, true);
 
-        return (bool) \file_put_contents($filename, $this->dump($array), $flags);
+        return (bool) file_put_contents($filename, $this->dump($array), $flags);
     }
 }

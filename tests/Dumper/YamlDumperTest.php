@@ -42,12 +42,12 @@ final class YamlDumperTest extends AbstractDumperTest
                     ],
                 ],
                 <<<'EOT'
-0: zero
-'*': bar
-deep:
-  list: [zero, one, 二]
-  map: { zero: 0, one: 1, 二: 2 }
-EOT
+                0: zero
+                '*': bar
+                deep:
+                  list: [zero, one, 二]
+                  map: { zero: 0, one: 1, 二: 2 }
+                EOT,
             ],
         ];
     }
@@ -63,6 +63,6 @@ EOT
      */
     public function testDump(array $input, string $output): void
     {
-        static::assertSame($output, \rtrim(static::$dumper->dump($input)));
+        static::assertSame($output, rtrim(static::$dumper->dump($input)));
     }
 }

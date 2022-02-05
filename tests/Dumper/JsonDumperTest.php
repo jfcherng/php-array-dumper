@@ -39,21 +39,21 @@ final class JsonDumperTest extends AbstractDumperTest
                     'foo' => 'bar',
                 ],
                 <<<'EOT'
-{
-    "0": "zero",
-    "foo": "bar"
-}
-EOT
+                {
+                    "0": "zero",
+                    "foo": "bar"
+                }
+                EOT,
             ],
             [
                 ['zero', 'one', '二'],
                 <<<'EOT'
-[
-    "zero",
-    "one",
-    "二"
-]
-EOT
+                [
+                    "zero",
+                    "one",
+                    "二"
+                ]
+                EOT,
             ],
         ];
     }
