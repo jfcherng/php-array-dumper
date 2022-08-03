@@ -28,7 +28,7 @@
     },
     "require": {
         "php": ">=8.0.2",
-        "nicmart/string-template": "~0.1",
+        "jfcherng/php-string-template": "~0.1",
         "spatie/array-to-xml": "^3",
         "symfony/yaml": "^5 || ^6"
     },
