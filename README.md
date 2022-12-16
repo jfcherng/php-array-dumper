@@ -1,6 +1,6 @@
 # php-array-dumper
 
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/jfcherng/php-array-dumper/Main/master?style=flat-square)](https://github.com/jfcherng/php-array-dumper/actions)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/jfcherng/php-array-dumper/php.yml?branch=master&style=flat-square)](https://github.com/jfcherng/php-array-dumper/actions)
 [![Packagist](https://img.shields.io/packagist/dt/jfcherng/php-array-dumper?style=flat-square)](https://packagist.org/packages/jfcherng/php-array-dumper)
 [![Packagist Version](https://img.shields.io/packagist/v/jfcherng/php-array-dumper?style=flat-square)](https://packagist.org/packages/jfcherng/php-array-dumper)
 [![Project license](https://img.shields.io/github/license/jfcherng/php-array-dumper?style=flat-square)](https://github.com/jfcherng/php-array-dumper/blob/master/LICENSE)
